@@ -1,0 +1,22 @@
+{
+  "name": "personal-web",
+  "version": "1.0.0",
+  "description": "Website personal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandurizky17/personal-web.git"
+  },
+  "author": "Pandu Rizky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandurizky17/personal-web/issues"
+  },
+  "homepage": "https://github.com/pandurizky17/personal-web#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,37 @@
+.background-self-data {
+  background-color: rgb(223, 223, 223);
+  background-size: contain;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.card-style {
+  max-width: 800px;
+  max-height: fit-content;
+  justify-items: center;
+}
+
+.form-download {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-decoration: none;
+  margin-top: 23%;
+  margin-left: 20%;
+  white-space: nowrap;
+}
+
+.form-download:hover {
+  color: orangered;
+}
+
+.form-icon {
+  color: white;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 3px;
+  margin-left: 5%;
+}

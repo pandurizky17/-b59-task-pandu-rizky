@@ -1,0 +1,572 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: auto;
+}
+/* Home Page Styles */
+.nav-container {
+  background-color: rgb(245, 245, 245);
+  display: flex; /*Menentukan Posisi Item di dalam Nav Bar*/
+  justify-content: space-between; /*untuk komponen yang dikiri dan kanan*/
+  align-items: center;
+  padding: 0px 40px;
+}
+
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center; /*untuk item vertikal*/
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  list-style: none; /*menghilanglan titik point list*/
+}
+
+.web-logo {
+  width: 80px;
+}
+
+.contact-link {
+  color: rgb(238, 238, 238);
+  font-size: 14px;
+  background-color: #149ad3;
+  border: 1px solid #149ad3;
+  font-weight: bold;
+  border-radius: 17px;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+.contact-link:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(238, 238, 238);
+  border: 1px solid rgb(238, 238, 238);
+  font-weight: bold;
+}
+
+.link-active {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.link-active:hover {
+  color: #149ad3;
+  font-weight: bold;
+}
+
+.link {
+  color: black;
+}
+
+.hamburger-container {
+  display: none;
+}
+
+.hamburger-button {
+  font-size: 24px;
+}
+
+.hamburger-menu-list {
+  background-color: rgb(245, 245, 245);
+  padding-right: 8%;
+  padding-left: 50%;
+  margin: 0;
+  list-style: none;
+  text-align: right;
+}
+
+.show-menu {
+  display: none;
+}
+
+.hide-menu {
+  display: none;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  /* navbar */
+  .nav-container {
+    width: 100%;
+  }
+  .navbar-links {
+    display: none;
+  }
+  .navbar-right {
+    display: none;
+  }
+  .hamburger-container {
+    display: block;
+  }
+
+  /* homepage */
+  .home-page {
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0 60px;
+  }
+
+  .show-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #profileCard {
+    width: 100%;
+  }
+}
+
+/*Left Content*/
+
+.background-content {
+  background-color: antiquewhite;
+  background-attachment: fixed;
+}
+
+.title-section {
+  width: 45%;
+}
+.left-content {
+  width: 1000px;
+  height: fit-content;
+  margin: auto;
+  margin-top: 7%;
+}
+
+.left-right {
+  margin: auto;
+  overflow: -moz-hidden-unscrollable;
+}
+
+.left-section {
+  background-color: hsla(0, 0%, 45%, 0.356);
+  max-height: fit-content;
+  width: 450px;
+  text-align: justify;
+  float: left;
+  padding-left: 3%;
+  padding-right: 2%;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+
+.right-section {
+  background-color: rgba(95, 158, 160, 0.281);
+  height: 400px;
+  width: 288px;
+  background-size: 70px;
+  max-height: fit-content;
+  margin-right: 15%;
+  float: right;
+}
+
+.name-section {
+  text-align: center;
+  padding: 6px;
+}
+
+/*Right Content*/
+
+.container {
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  width: fit-content;
+}
+
+.sidebar {
+  width: 20%;
+  padding: 15px;
+}
+
+.content {
+  width: 60%;
+  padding: 15px;
+}
+
+/*Tombol Contact*/
+.left-bottom {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 9px;
+  padding: 5px 20px;
+}
+.contact-button:hover {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  border: 1px solid black;
+}
+.contact-button:link {
+  text-decoration: none;
+}
+
+/*Tombol Download CV*/
+.form-download {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-decoration: none;
+  margin-top: 23%;
+  margin-left: 20%;
+  white-space: nowrap;
+}
+
+.form-download:hover {
+  color: orangered;
+}
+
+.form-icon {
+  color: white;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 3px;
+  margin-left: 5%;
+}
+
+.download-cv {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  border-radius: 9px;
+  padding: 5px 20px;
+}
+.download-cv:hover {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #149ad3;
+}
+.download-cv:link {
+  text-decoration: none;
+}
+
+/*Contact Me Style*/
+.contact-section {
+  max-height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.contact-form {
+  width: 400px;
+  font-family: "Poppins", sans-serif;
+  background-color: hsla(0, 0%, 45%, 0.356);
+  border: 2px solid #cacaca;
+  border-radius: 9px;
+  padding: 5px 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-weight: bold;
+  gap: 10px;
+}
+
+.form-input {
+  border-radius: 5px;
+  border: 1px solid #cacaca;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.left-bottom {
+  align-items: center;
+}
+
+.form-submit-button {
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  border-radius: 9px;
+  border: 1px solid orangered;
+  border-radius: 9px;
+  padding: 5px 20px;
+  margin-top: 15%;
+  margin-left: 77%;
+  margin-bottom: 10%;
+}
+.form-submit-button:hover {
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+.form-submit-button:link {
+  text-decoration: none;
+}
+
+/*Icon Social Media*/
+.icon-bar {
+  position: static;
+  display: flex;
+  border-radius: 40px;
+  margin-top: 8%;
+  padding-bottom: 2%;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 25px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.255);
+  background-size: contain;
+}
+
+.linkedin {
+  color: white;
+}
+
+.instagram {
+  color: white;
+}
+
+.facebook {
+  color: white;
+}
+
+.twitter {
+  color: white;
+}
+
+/* Blog Page Style */
+
+.blog-form {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+}
+
+.form-label {
+  font-size: 18px;
+}
+
+.form-container button {
+  margin-top: 30px;
+  padding: 8px 20px;
+  color: white;
+  background-color: orangered;
+  border: none;
+  border-radius: 8px;
+}
+
+.button-group {
+  text-align: right;
+}
+
+hr {
+  width: 80%;
+}
+
+/* Blog List */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+.blog list {
+  width: 70px;
+}
+
+.blog-list-item {
+  display: flex;
+  gap: 20px;
+  border: 2px solid #c4c4c4;
+  padding: 20px;
+}
+
+.blog-image img {
+  height: 100%;
+  width: 400px;
+}
+
+.blog-text {
+  margin: 0;
+}
+
+.blog-item-title {
+  text-decoration: none;
+}
+
+/* Isi Blog Untuk Task */
+.style-form {
+  background-color: rgb(226, 226, 226);
+  height: 100%;
+  background-size: 100%;
+}
+
+.project-body-form {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1%;
+}
+
+.project-form {
+  width: 400px;
+  font-family: "Poppins", sans-serif;
+  padding: 30px 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.form-input {
+  color: #252525;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #cacaca;
+  box-shadow: 0 9px 15px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  width: 360px;
+}
+
+.form-date {
+  display: flex;
+  flex-direction: row;
+  width: 125px;
+}
+
+.form-date-input {
+  font-family: "Poppins", sans-serif;
+  color: #252525;
+  border-radius: 5px;
+  border: 1px solid #cacaca;
+  box-shadow: 0 9px 15px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  font-size: 12px;
+  row-gap: 50px;
+  width: 173px;
+  cursor: pointer;
+}
+
+textarea {
+  font-family: "Poppins", sans-serif;
+  color: #252525;
+  width: 100%;
+  padding: 5px;
+  font-size: 12px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 9px 15px rgba(0, 0, 0, 0.1);
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: #c4c4c4;
+  outline: none;
+}
+
+.technologies-form {
+  display: grid; /* Mengaktifkan Grid */
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Membuat tiga kolom dengan lebar sama */
+  gap: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+  align-items: center;
+  width: 100%;
+}
+
+/* Attach File dan Input Image */
+.input-blog-image-group {
+  background-color: #ffffff;
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.input-blog-image-group label {
+  border: #c4c4c4;
+  font-weight: lighter;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.input-blog-image-group label img {
+  width: 20px;
+  padding-left: 78%;
+}
+
+.blog-submit-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 9px;
+  padding: 5px 20px;
+  margin-top: 15%;
+  margin-left: 75%;
+}
+
+.blog-submit-button:hover {
+  background-color: black;
+  border: 1px solid black;
+}
