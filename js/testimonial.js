@@ -43,7 +43,7 @@ const testimonialsHTML = (daftarTestimoni) => {
         <div class="card p-3 col mx-0">
             <img src="assets/img/${testimonial.image}" class="card-img-top" alt="..." />
             <div class="card-body px-0">
-              <div class="overflow-scroll" style="height: 50px">
+              <div class="overflow-y-auto" style="height: 70px">
                 <p class="card-text">${testimonial.content}</p>
               </div>
               <div class="text-end fw-bold mt-3">

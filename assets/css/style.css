@@ -438,7 +438,7 @@ hr {
 
 /* Isi Blog Untuk Task */
 .style-form {
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(255, 255, 255);
   height: 100%;
   background-size: 100%;
 }
@@ -493,7 +493,7 @@ hr {
   padding: 5px;
   font-size: 12px;
   row-gap: 50px;
-  width: 173px;
+  width: 180px;
   cursor: pointer;
 }
 
@@ -541,8 +541,8 @@ textarea:focus {
 
 .input-blog-image-group label {
   border: #c4c4c4;
-  font-weight: lighter;
   padding-left: 10px;
+  padding-top: 7px;
   display: flex;
   align-items: center;
   height: 100%;
@@ -551,7 +551,8 @@ textarea:focus {
 
 .input-blog-image-group label img {
   width: 20px;
-  padding-left: 78%;
+  margin-left: 80%;
+  padding-bottom: 5px;
 }
 
 .blog-submit-button {
@@ -569,4 +570,36 @@ textarea:focus {
 .blog-submit-button:hover {
   background-color: black;
   border: 1px solid black;
+}
+
+.tambah-blog {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  background-color: #149ad3;
+  border: 1px solid #149ad3;
+  font-weight: bold;
+  border-radius: 17px;
+  padding: 5px 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tambah-blog:hover {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.button-blog {
+  color: black;
+  background-color: #149ad3;
+  border: 1px solid #2c2c2c;
+  text-decoration: none;
+}
+
+.button-blog:hover {
+  color: #ffffff;
+  background-color: #888888;
+  border: 1px solid #000000;
 }

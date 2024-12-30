@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+   <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="icon" href="/assets/img/iconweb.png" />
+  </head>
+  <body>
+  <!-- Nav Bar -->
+
+    {{> navbar}}
+
+  <!-- Navbar Ends -->
+
+  {{!-- Form Untuk Submit --}}
+      <main class="project-body-form">
+        <form action="/blog" method="post" id="project-input" class="blog-card">
+          <h1 style="text-align: center;">Add My Project</h1>
+          <div class="form-field">
+            <label for="name">Project Name</label>
+            <input id="name" name="name" class="form-input" type="text" placeholder="project name..."></input>
+          </div>
+
+          <div class="form-date">
+            <div class="form-field">
+              <label for="startDate">Start Date</label>
+              <input id="startDate" name="startDate" class="form-date-input" type="date" placeholder="Start Date"></input>
+            </div>
+        
+            <div class="form-field">
+              <label for="endDate">End Date</label>
+              <input id="endDate" name="endDate" class="form-date-input" type="date" placeholder="End Date" ></input>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="description">Description</label>
+            <textarea id="description" class="form-input" name="description" rows="6" placeholder="Write the description here..."></textarea>
+          </div>
+
+          <div class="form-field">
+              Technologies
+              <div class="technologies-form">
+                <label><input type="checkbox" name="nodejs" value="nodeJS">  Node JS</label>
+                <label><input type="checkbox" name="reactjs" value="reactJS">  React JS</label>
+              </div>
+
+              <div class="technologies-form">
+                <label><input type="checkbox" name="nextjs" value="nextJS">  Next JS</label>
+                <label><input type="checkbox" name="typescript" value="typeScript">  TypeScript</label>
+              </div>
+          </div>
+
+          <div class="form-field">
+            <label for="input-blog-image" class="form-label">Upload Image</label>
+              <div class="input-blog-image-group">
+                <label for="input-blog-image">
+                   <p id="choose-image" style="color: rgb(59, 59, 59);">choose</p>
+                   <img src="/assets/img/file.png" />
+                </label>
+                <input onchange="onImageChange(event)" id="input-blog-image" name="images" class="form-input" type="file" placeholder="title" hidden/>
+              </div>
+          </div>
+
+          <button class="blog-submit-button" type="submit" >
+            Submit
+          </button>
+        </form>
+      </main>
+
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+   <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="icon" href="/assets/img/iconweb.png" />
+  </head>
+  <body>
+   <!-- Nav Bar -->
+
+    {{> navbar}}
+
+    <!-- Navbar Ends -->
+    <!-- Blog Dimulai Dari Sini -->
+    <div class="style-form">
+      <section class="blog-container">
+          <a class="tambah-blog" href="/addblog">
+            Tambah Blog
+          </a>
+        <div class="blog-list" id="blogList">
+         {{#each data}} 
+          <div class="blog-list-item">
+            <div class="blog-image">
+              <img src="/assets/img/{{this.image}}" alt="Images" />
+            </div>
+            <div class="blog-content">
+              <div class="btn-group">
+                <button class="button-blog">
+                    <a href="/editblog/{{this.id}}?image={{this.image}}" style="text-decoration:none;color:black">
+                    Edit Post
+                    </a>
+                  </button>
+                <form action="/blog/{{this.id}}?_method=DELETE" method="POST">
+                  <button onclick="return confirm('Delete id: {{this.title}}')" class="button-blog">Delete</button>
+                </form>
+              </div>
+              <a href="/blogdetail/{{this.id}}" style="text-decoration:none;color:black">
+                <h1>{{this.title}}</h1>
+              </a> 
+              <div class="detail-blog-content">
+                <h5>{{formatDate this.createdAt}} | Pandu Rizky Wicaksana</h5>
+              </div>
+              <p class="blog-text" style="font-weight: bolder;">
+              {{this.technologies}}
+              </p>
+               <p class="blog-text">
+              {{this.content}}
+              </p>
+              <p class="blog-text">
+              {{!-- {{textSlice this.content}} --}}
+              </p>
+              <p style="text-align: right">
+                <span id="realTime-0">{{times this.createdAt}}</span>
+              </p>
+            </div>
+          
+          </div>
+          {{/each}}
+        </div>
+      </section>
+    </div>
+    
+    <!--<script src="submitform.js"> </script>
+    <script src="belajar.-js.js"> </script> 
+    -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script> 
+    function onImageChange (event) {
+        const fieldImageName = document.getElementById("choose-image");
+        const chooseImage = event.target.value
+        console.log(fieldImageName);
+
+
+        console.log(event.target.value);
+        console.log(event.target.id);
+        
+        const value = event.target.value
+
+        const splitValue = value.split("\\")[2].split('.')[0]
+       fieldImageName.innerHTML = "Image Uploaded"
+    }
+
+  </script>
+  </body>
+</html>

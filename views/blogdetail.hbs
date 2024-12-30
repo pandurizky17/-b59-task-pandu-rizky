@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog Detail</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="icon" href="/assets/img/iconweb.png" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+
+    {{> navbar}}
+
+    <!-- Navbar Ends -->
+
+    <!-- Isi Konten -->
+    <div class="container px-4" style="max-width: 800px; padding-top: 100px">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img
+            src="/assets/img/{{data.image}}"
+            class="img-fluid"
+            alt="{{data.image}}"
+          />
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h1>{{data.title}}</h1>
+              <div style="font-weight:bold">
+                {{formatDate data.createdAt}} | Pandu Rizky Wicaksana
+             
+              <p style="font-weight: lighter;">
+              {{data.technologies}}
+              </p>
+               </div>
+              <p style="text-align: justify; font-weight:lighter">
+                {{data.content}}
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Isi Konten -->
+  </body>
+</html>

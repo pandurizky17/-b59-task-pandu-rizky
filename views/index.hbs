@@ -1,59 +1,17 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style-card.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="icon" href="assets/iconweb.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style-card.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="assets/img/iconweb.png" />
   </head>
-  <body style="background-image: url(assets/bluewave.jpg)">
+  <body style="background-image: url(assets/img/bluewave.jpg)">
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="assets/iconweb.png"
-            alt="Bootstrap"
-            width="30"
-            height="30"
-            style="margin-left: auto"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="testimonial.html">Testimonial</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <a href="contactme.html" class="contact-link">Contact Me</a>
-          </form>
-        </div>
-      </div>
-    </nav>
-
+    {{> navbar}}
     <!-- Dropdown Start
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul class="navbar-nav">
@@ -110,19 +68,21 @@
                 href="#"
                 style="font-size: 12px; height: fit-content"
                 class="contact-link"
-                >Contact
+              >Contact
               </a>
-              <a href="#" class="download-cv"
-                >Download CV
+              <a href="https://drive.google.com/file/d/1NAAb6R2JTpAsv6Z50VfEy0lbq7ECYP-o/view?usp=sharing" class="download-cv" target="_blank">Download CV 
                 <img
                   style="width: 13px; height: 13px; margin-bottom: 4px"
-                  src="assets/download.png"
+                  src="assets/img/download.png"
                 />
               </a>
             </div>
 
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
+            <p class="card-text" style="padding: top 30%;">
+              <a href="#" style="text-decoration:none;color:black">  <i class="fa-brands fa-instagram fa-2x pt-5 mx-3" ></i>  </a>
+              <a href="#" style="text-decoration:none;color:black"><i class="fa-brands fa-linkedin fa-2x mx-3"></i> </a>
+              <a  href="#" style="text-decoration:none;color:black"><i class="fa-brands fa-twitter fa-2x mx-3"></i></a>
+              <a  href="#" style="text-decoration:none;color:black"><i class="fa-brands fa-facebook fa-2x mx-3"></i></a>
             </p>
           </div>
         </div>
@@ -136,7 +96,7 @@
           "
         >
           <img
-            src="assets/pandu.jpg"
+            src="assets/img/pandu.jpg"
             class="img-fluid rounded-top"
             alt="..."
             style="padding-top: 3%"
@@ -152,5 +112,14 @@
 
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!-- Include Handlebars from a CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"> </script>
+
+    <script>
+      // compile the template var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+      // execute the compiled template and print the output to the console
+      console.log(template({ doesWhat: "Bonjour!" }));
+    </script>
   </body>
 </html>
